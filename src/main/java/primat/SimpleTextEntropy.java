@@ -41,15 +41,18 @@ public class SimpleTextEntropy implements TextEntropy {
                 });
     }
 
+    @Override
     public List<StringAttribute> readTextAndGetAllCharacterAttributes() throws IOException {
         readTextAndFillCounts();
         findEntropy();
         return new ArrayList<>(mapCharacterAttributes.values());
     }
 
+    @Override
     public double getFullEntropy() {
         return mapCharacterAttributes.values().stream()
                 .mapToDouble(StringAttribute::getEntropy)
                 .sum();
     }
+
 }

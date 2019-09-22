@@ -7,17 +7,15 @@ import java.util.Scanner;
 public class TextEntropyUtils {
 
     public static void printFormattedTable(PrintStream printStream, List<StringAttribute> stringAttributes) {
-        final int[] columnWidth = {10, 12, 8};
+        final int[] columnWidth = {15, 12, 8};
         final String formatString = "%" + columnWidth[0] + "s" + "%" + columnWidth[1] + ".4f" + "%" + columnWidth[2] + ".4f\n";
         printStream.printf("%" + columnWidth[0] + "s" + "%" + columnWidth[1] + "s" + "%" + columnWidth[2] + "s\n", "Character", "Possibility", "Entropy");
         stringAttributes.forEach(stringAttribute -> {
-            String outputCharacter = stringAttribute.getString();
-            if (outputCharacter.equals(" "))
-                outputCharacter = "space";
-            else if (outputCharacter.equals(TextEntropy.PUNCTUATION_CHARACTER))
-                outputCharacter = "punct";
+            String outputString = stringAttribute.getString();
+            outputString = outputString.replace(" ", "<space>");
+            outputString = outputString.replace(TextEntropy.PUNCTUATION_CHARACTER, "<punct>");
             printStream.printf(formatString,
-                    outputCharacter,
+                    outputString,
                     stringAttribute.getPossibility(),
                     stringAttribute.getEntropy());
         });
