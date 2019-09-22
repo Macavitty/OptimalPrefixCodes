@@ -4,12 +4,14 @@ import java.io.*;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.Math.log;
+
 public class TextEntropyUtils {
 
     public static void printFormattedTable(PrintStream printStream, List<StringAttribute> stringAttributes) {
         final int[] columnWidth = {15, 12, 8};
-        final String formatString = "%" + columnWidth[0] + "s" + "%" + columnWidth[1] + ".4f" + "%" + columnWidth[2] + ".4f\n";
-        printStream.printf("%" + columnWidth[0] + "s" + "%" + columnWidth[1] + "s" + "%" + columnWidth[2] + "s\n", "Character", "Possibility", "Entropy");
+        final String formatString = "%" + columnWidth[0] + "s%" + columnWidth[1] + ".4f%" + columnWidth[2] + ".4f\n";
+        printStream.printf("%" + columnWidth[0] + "s%" + columnWidth[1] + "s%" + columnWidth[2] + "s\n", "Character", "Possibility", "Entropy");
         stringAttributes.forEach(stringAttribute -> {
             String outputString = stringAttribute.getString();
             outputString = outputString.replace(" ", "<space>");
@@ -82,6 +84,10 @@ public class TextEntropyUtils {
                 System.out.println("Введено неверное имя файла, пожалуйста, следуйте инструкциям.");
             }
         }
+    }
+
+    public static double log2(double arg) {
+        return log(arg)/log(2);
     }
 
 }

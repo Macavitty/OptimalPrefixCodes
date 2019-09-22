@@ -7,11 +7,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-import static java.lang.Math.log;
+import static primat.TextEntropyUtils.log2;
 
 public class PairTextEntropy implements TextEntropy {
 
     private InputStream input;
+    private Map<String, StringAttribute> mapStringAttributes = new TreeMap<>();
     private Map<String, StringAttribute> mapCharacterAttributes = new TreeMap<>();
     private int fileLength = 0;
 
@@ -29,26 +30,39 @@ public class PairTextEntropy implements TextEntropy {
                 .map(string -> Character.isLetter(string.charAt(0)) || Character.isWhitespace(string.charAt(0)) ? string : PUNCTUATION_CHARACTER)
                 .map(String::toLowerCase)
                 .forEach(string -> {
-                    if (previousCharacter[0] != null) {
-                        string = previousCharacter[0] + string;
-                        previousCharacter[0] = String.valueOf(string.charAt(1));
-                    }
-                    else
-                        previousCharacter[0] = string;
+
                     if (!mapCharacterAttributes.containsKey(string))
                         mapCharacterAttributes.put(string, new StringAttribute(string, 1));
                     else {
                         StringAttribute stringAttribute = mapCharacterAttributes.get(string);
                         stringAttribute.setCount(stringAttribute.getCount() + 1);
                     }
+
+                    if (previousCharacter[0] != null) {
+                        string = previousCharacter[0] + string;
+                        previousCharacter[0] = String.valueOf(string.charAt(1));
+                        if (!mapStringAttributes.containsKey(string))
+                            mapStringAttributes.put(string, new StringAttribute(string, 1));
+                        else {
+                            StringAttribute stringAttribute = mapStringAttributes.get(string);
+                            stringAttribute.setCount(stringAttribute.getCount() + 1);
+                        }
+                    } else
+                        previousCharacter[0] = string;
+
                 });
     }
 
     private void findEntropy() {
-        mapCharacterAttributes.values()
+        mapStringAttributes.values()
                 .forEach(stringAttribute -> {
-                    stringAttribute.setPossibility(((double) stringAttribute.getCount()) / fileLength);
-                    stringAttribute.setEntropy(-(stringAttribute.getPossibility() * log(stringAttribute.getPossibility())));
+                    stringAttribute.setPossibility(((double) stringAttribute.getCount()) / (fileLength - 1));
+                    stringAttribute.setEntropy(-(stringAttribute.getPossibility() * log2(stringAttribute.getPossibility())));
+                });
+        mapCharacterAttributes.values()
+                .forEach(characterAttribute -> {
+                    characterAttribute.setPossibility(((double) characterAttribute.getCount()) / fileLength);
+                    characterAttribute.setEntropy(-(characterAttribute.getPossibility() * log2(characterAttribute.getPossibility())));
                 });
     }
 
@@ -56,13 +70,15 @@ public class PairTextEntropy implements TextEntropy {
     public List<StringAttribute> readTextAndGetAllCharacterAttributes() throws IOException {
         readTextAndFillCounts();
         findEntropy();
-        return new ArrayList<>(mapCharacterAttributes.values());
+        return new ArrayList<>(mapStringAttributes.values());
     }
 
     @Override
     public double getFullEntropy() {
-        return mapCharacterAttributes.values().stream()
-                .mapToDouble(StringAttribute::getEntropy)
+        return mapStringAttributes.values().stream()
+                .mapToDouble(stringAttribute -> -(stringAttribute.getPossibility()
+                        * mapCharacterAttributes.get(String.valueOf(stringAttribute.getString().charAt(1))).getPossibility()
+                        * log2(stringAttribute.getPossibility())))
                 .sum();
     }
 }

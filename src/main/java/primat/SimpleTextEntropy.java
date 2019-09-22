@@ -3,7 +3,7 @@ package primat;
 import java.io.*;
 import java.util.*;
 
-import static java.lang.Math.*;
+import static primat.TextEntropyUtils.log2;
 
 public class SimpleTextEntropy implements TextEntropy {
 
@@ -37,7 +37,7 @@ public class SimpleTextEntropy implements TextEntropy {
         mapCharacterAttributes.values()
                 .forEach(stringAttribute -> {
                     stringAttribute.setPossibility(((double) stringAttribute.getCount()) / fileLength);
-                    stringAttribute.setEntropy(-(stringAttribute.getPossibility() * log(stringAttribute.getPossibility())));
+                    stringAttribute.setEntropy(-(stringAttribute.getPossibility() * log2(stringAttribute.getPossibility())));
                 });
     }
 
