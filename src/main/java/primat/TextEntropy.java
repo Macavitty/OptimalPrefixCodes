@@ -9,10 +9,10 @@ public class TextEntropy {
 
     public static void main(String... args) {
         try {
-            TextEntropy textEntropy = new TextEntropy(new FileInputStream(new File("data.txt")));
+            TextEntropy textEntropy = new TextEntropy(new FileInputStream(new File("StivenKing_It.txt")));
             List<CharacterAttribute> characterAttributes = textEntropy.readTextAndGetAllCharacterAttributes();
-            //characterAttributes.forEach(System.out::println);
             TextEntropyUtils.printFormattedTable(System.out, characterAttributes);
+            System.out.println("Full entropy is " + textEntropy.getFullEntropy());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -72,10 +72,10 @@ public class TextEntropy {
         }
     }
 
-    private static final char PUNCTUATION_CHARACTER = '.';
+    public static final char PUNCTUATION_CHARACTER = '.';
 
     private InputStream input;
-    private Map<Character, CharacterAttribute> mapCharacterAttributes = new HashMap<>();
+    private Map<Character, CharacterAttribute> mapCharacterAttributes = new TreeMap<>();
     private int fileLength = 0;
 
     public TextEntropy(InputStream input) {
@@ -87,6 +87,7 @@ public class TextEntropy {
         fileLength = inputStream.length();
         inputStream.chars()
                 .mapToObj(character -> (char) character)
+                .filter(character -> character != '\n')
                 .map(character -> Character.isLetter(character) || Character.isWhitespace(character) ? character : PUNCTUATION_CHARACTER)
                 .map(Character::toLowerCase)
                 .forEach(character -> {
@@ -113,7 +114,9 @@ public class TextEntropy {
         return new ArrayList<>(mapCharacterAttributes.values());
     }
 
-    public static char getPunctuationCharacter() {
-        return PUNCTUATION_CHARACTER;
+    public double getFullEntropy() {
+        return mapCharacterAttributes.values().stream()
+                .mapToDouble(CharacterAttribute::getEntropy)
+                .sum();
     }
 }
