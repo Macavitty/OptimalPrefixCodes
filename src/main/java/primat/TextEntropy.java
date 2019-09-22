@@ -5,9 +5,9 @@ import java.util.*;
 
 public interface TextEntropy {
 
-    public static final char PUNCTUATION_CHARACTER = '.';
+    String PUNCTUATION_CHARACTER = ".";
 
-    public List<CharacterAttribute> readTextAndGetAllCharacterAttributes() throws IOException;
+    List<StringAttribute> readTextAndGetAllCharacterAttributes() throws IOException;
 
-    public double getFullEntropy();
+    double getFullEntropy();
 }

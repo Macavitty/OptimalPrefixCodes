@@ -6,34 +6,34 @@ import java.util.Scanner;
 
 public class TextEntropyUtils {
 
-    public static void printFormattedTable(PrintStream printStream, List<CharacterAttribute> characterAttributes) {
+    public static void printFormattedTable(PrintStream printStream, List<StringAttribute> stringAttributes) {
         final int[] columnWidth = {10, 12, 8};
         final String formatString = "%" + columnWidth[0] + "s" + "%" + columnWidth[1] + ".4f" + "%" + columnWidth[2] + ".4f\n";
         printStream.printf("%" + columnWidth[0] + "s" + "%" + columnWidth[1] + "s" + "%" + columnWidth[2] + "s\n", "Character", "Possibility", "Entropy");
-        characterAttributes.forEach(characterAttribute -> {
-            String outputCharacter = String.valueOf(characterAttribute.getCharacter());
+        stringAttributes.forEach(stringAttribute -> {
+            String outputCharacter = stringAttribute.getString();
             if (outputCharacter.equals(" "))
                 outputCharacter = "space";
-            else if (outputCharacter.equals(String.valueOf(TextEntropy.PUNCTUATION_CHARACTER)))
+            else if (outputCharacter.equals(TextEntropy.PUNCTUATION_CHARACTER))
                 outputCharacter = "punct";
             printStream.printf(formatString,
                     outputCharacter,
-                    characterAttribute.getPossibility(),
-                    characterAttribute.getEntropy());
+                    stringAttribute.getPossibility(),
+                    stringAttribute.getEntropy());
         });
     }
 
     public static void printHeader(PrintStream printStream) {
         printStream.println("Программа для нахождения энтропии английского текста.");
         printStream.println("Допустимые символы: символы английского алфавита, пробелы и знаки пунктуации.");
+        printStream.println("Для начала работы");
     }
 
     public static TextEntropy getTextEntropyFromInputWithOutput(PrintStream outputStream, InputStream inputStream) {
         Scanner in = new Scanner(inputStream);
         while (true) {
             try {
-                outputStream.print("Для начала работы введите:" +
-                        "\n 0 чтобы ввести путь к файлу для нахождения энтропии без частот пар," +
+                outputStream.print("Введите 0 чтобы ввести путь к файлу для нахождения энтропии без частот пар," +
                         "\n 1 чтобы ввести путь к файлу для нахождения энтропии с частототами пар," +
                         "\n q или 2 для выхода из программы: ");
                 String token = in.next();
@@ -63,7 +63,7 @@ public class TextEntropyUtils {
             try {
                 outputStream.print("Введите имя файла: ");
                 String filename = in.nextLine();
-                outputStream.println("Имя файла введено, начинается подсчет...");
+                outputStream.println("Имя файла введено.");
                 return filename;
             } catch (Exception e) {
                 outputStream.println("Ошибка ввода, повторите ввод.");
@@ -73,6 +73,7 @@ public class TextEntropyUtils {
     }
 
     public static void main(String... args) {
+        printHeader(System.out);
         while (true) {
             TextEntropy textEntropy = getTextEntropyFromInputWithOutput(System.out, System.in);
             try {

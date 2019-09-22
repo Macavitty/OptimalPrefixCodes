@@ -1,19 +1,23 @@
 package primat;
 
-public class CharacterAttribute {
+public class StringAttribute {
 
-    private char character;
+    private String string;
     private int count;
     private double possibility;
     private double entropy;
 
-    public CharacterAttribute(char character, int count) {
-        this.character = character;
+    public StringAttribute(String string, int count) {
+        this.string = string;
         this.count = count;
     }
 
-    public char getCharacter() {
-        return character;
+    public String getString() {
+        return string;
+    }
+
+    public void setString(String string) {
+        this.string = string;
     }
 
     public int getCount() {
@@ -40,13 +44,4 @@ public class CharacterAttribute {
         this.entropy = entropy;
     }
 
-    @Override
-    public String toString() {
-        return "CharacterAttribute{" +
-                "character=" + character +
-                ", count=" + count +
-                ", possibility=" + possibility +
-                ", entropy=" + entropy +
-                '}';
-    }
 }

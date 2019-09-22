@@ -130,8 +130,8 @@ Lipid
 Protein
 Nucleic Acids
 Identify the reactants and products in the following chemical reactions:
- CH + O Æ CO + H
- CO + H Æ. CH + O
+ CH + O  CO + H
+ CO + H . CH + O
 Biology High School Assessment Student Resource Book
 Prince George’s County Public SchoolsName
  DatePeriod 
@@ -231,7 +231,7 @@ Diffusion is the movement of  from  concentration to
  concentration.
 When a cell is placed in a hypertonic solution, it will  becauseActive transport uses , passive transport uses no , and facilitated
 diffusion is a form of  transport.
- Æ Tissues Æ  ÆOrgan Systems
+  Tissues   Organ Systems
 Fill in the blanks with the following terms:
 ameoboid
 ciliate

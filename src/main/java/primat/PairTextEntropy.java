@@ -9,7 +9,7 @@ import java.util.TreeMap;
 public class PairTextEntropy implements TextEntropy {
 
     private InputStream input;
-    private Map<Character, CharacterAttribute> mapCharacterAttributes = new TreeMap<>();
+    private Map<Character, StringAttribute> mapCharacterAttributes = new TreeMap<>();
     private int fileLength = 0;
 
     public PairTextEntropy(InputStream input) {
@@ -17,7 +17,7 @@ public class PairTextEntropy implements TextEntropy {
     }
 
     @Override
-    public List<CharacterAttribute> readTextAndGetAllCharacterAttributes() throws IOException {
+    public List<StringAttribute> readTextAndGetAllCharacterAttributes() throws IOException {
         return null;
     }
 
