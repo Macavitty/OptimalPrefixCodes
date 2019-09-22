@@ -23,13 +23,14 @@ public class PairTextEntropy implements TextEntropy {
     private void readTextAndFillCounts() throws IOException {
         final String[] previousCharacter = {null};
         String inputStream = new String(input.readAllBytes());
-        fileLength = inputStream.length();
         inputStream.chars()
                 .mapToObj(character -> String.valueOf((char) character))
                 .filter(string -> !string.equals("\n"))
                 .map(string -> Character.isLetter(string.charAt(0)) || Character.isWhitespace(string.charAt(0)) ? string : PUNCTUATION_CHARACTER)
                 .map(String::toLowerCase)
                 .forEach(string -> {
+
+                    ++fileLength;
 
                     if (!mapCharacterAttributes.containsKey(string))
                         mapCharacterAttributes.put(string, new StringAttribute(string, 1));
