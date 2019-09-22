@@ -9,7 +9,7 @@ public class TextEntropy {
 
     public static void main(String... args) {
         try {
-            TextEntropy textEntropy = new TextEntropy(new FileInputStream(new File("StivenKing_It.txt")));
+            TextEntropy textEntropy = new TextEntropy(new FileInputStream(new File("BiologyStudentBook.txt")));
             List<CharacterAttribute> characterAttributes = textEntropy.readTextAndGetAllCharacterAttributes();
             TextEntropyUtils.printFormattedTable(System.out, characterAttributes);
             System.out.println("Full entropy is " + textEntropy.getFullEntropy());

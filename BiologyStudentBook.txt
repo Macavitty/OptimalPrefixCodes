@@ -1,0 +1,513 @@
+Making the Connection-Designer Trees: A Way to Counteract the
+Greenhouse Effect
+(Biotechnology Manual, pp. -. Copyright by Pearson Education, Inc., publishing as Pearson Prentice
+Hall, Upper Saddle River, New Jersey . Prentice Hall)
+Earth’s climate has been relatively stable for the last several thousand years. However, there is a new
+threat to Earth’s climate: air pollution. Global air pollution has steadily increased in recent decades. The
+ecological, economic, and societal costs of air pollution are increasing daily.
+Greenhouse Effect
+The release of carbon dioxide, or CO, is associated with increasing air pollution. The burning of fossil fuels
+and wood and the cutting down of forests have released much carbon dioxide into the air. Since the start of
+industrial times there has been a  percent increase in the amount of atmospheric carbon dioxide. During
+the same period of time, global temperatures have increased by .°C. Scientists think that the
+temperature increase is caused by the release of more carbon dioxide into the air. Because carbon dioxide
+molecules in the air help to trap heat, they act like the glass roof of a greenhouse. Consequently, the heat
+trapping action of carbon dioxide in the atmosphere has been called the greenhouse effect. Current
+computer models of the global atmosphere and climate give conflicting information about the world’s future
+climate. Nevertheless, in the next  years, the amount of atmospheric carbon dioxide will probably
+double. Although atmospheric carbon dioxide levels have changed in the past, they have never doubled in
+just  years! Concerned people think it is important to find techniques and propose policies to reduce air
+pollution.
+Storing Carbon
+The cultivation of more woody plants is one possible way to reduce atmospheric carbon dioxide. Plants
+need carbon dioxide for photosynthesis. During photosynthesis, plants change carbon dioxide into sugar,
+which the plants use for energy. Woody plants convert much of their sugar into wood. Consequently, woody
+plants can also store carbon for many years in their woody stems and roots. Because they can store
+carbon, woody plants can be considered a kind of carbon bank. The longer a woody plant lives, the longer
+it can store atmospheric carbon. So, long-lived trees are excellent for storing carbon. The faster trees grow
+and the more forests that are planted, the greater the effect trees could have on slowing the increase of
+atmospheric carbon dioxide. But, because forests are being cut down rapidly, more carbon dioxide is being
+released into the atmosphere, and the amount of potential carbon storage is being reduced.
+Speeding up the Process
+Besides growing more trees, another possible way for humans to reduce the amount of carbon dioxide in
+the atmosphere is by enabling plants to use more carbon dioxide. Normally there is enough carbon dioxide
+in the air so that the rate of photosynthesis is not slowed. Usually during photosynthesis, other steps than
+the ones of the Calvin cycle limit the rate at which plants can use carbon dioxide. In theory, by finding a
+way to speed up the slowest steps, the rate of carbon dioxide uptake should be increased. Making the
+sugar-transfer enzymes of a plant work more effectively would be one way to speed up the process of
+using sugars. As a result, plants would move sugars faster and produce more cellulose. Consequently
+more carbon would be stored.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsEnhancing Sugar Transport
+One of the most important enzymes involved in moving sugars in plants is called sucrose phosphate
+synthetase. This enzyme catalyzes the reaction between fructose--phosphate and UDP glucose. UDP
+glucose, or uridine diphosphate glucose, is an activated form of glucose. When the enzyme links fructose
+and glucose together, they form sucrose--phosphate.Sucrose is the sugar that is usually transported in the
+sap of woody plants. In theory, plants that have more-active sucrose-forming enzymes should grow faster
+than plants with less-active enzymes. Actually, researchers have found that certain plants with more-active
+sucrose phosphate synthetase enzymes do grow faster. Consequently researchers can screen plants for
+more-active sucrose phosphate synthetase enzymes by studying the seedlings that grow fastest.
+Researchers have to consider a second factor when selecting plants to counteract the greenhouse effect.
+The chosen plants should be able to grow faster when the carbon dioxide concentration in the air is higher
+than normal. So after screening plants for more active sucrose phosphate synthetase enzymes,
+researchers also need to screen the plants for the ability to grow fast in the presence of higher levels of
+carbon dioxide. After researchers have identified plants with more-active sucrose phosphate synthetase
+enzymes, there are still more steps in the process of genetic engineering. Scientists must locate and
+remove the gene for the sucrose phosphate synthetase enzyme from the faster-growing plants. Then the
+genetic engineers must duplicate the gene many times and insert copies of the gene into seedling plants so
+that the plants will grow faster. Through this process, eventually it may be possible to create trees that grow
+faster and remove more carbon dioxide from the air.
+REVIEW In the space provided, answer the following questions.
+Why are some people concerned about the increase in the amount of carbon dioxide in the air?
+How might trees be used to reduce the amount of carbon dioxide in the atmosphere?
+ What does the enzyme sucrose phosphate synthetase do? b. Why is this enzyme important to plants?
+What might be done to make trees more effective in storing carbon?
+List some steps in the process of genetically engineering trees with the enzyme sucrose phosphate
+synthetase.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName:  Period:  Date:
+Biochemistry
+Draw and label the parts of an atom.
+Define the following:
+Word
+Definition
+Atom
+Compound
+Molecule
+Covalent Bond
+Ionic Bond
+Hydrolysis reaction
+Dehydration synthesis
+(Condensation reaction)
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsThis page intentionally left blank.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName:  Period:  Date:
+Making Golden Models
+Wow! You have the Midas touch! Okay. Maybe you are not making gold today, but you are making
+very essential compounds that help to sustain many life forms. Your job is to use the model kit and
+prepare compounds such as carbon dioxide, glucose, oxygen and water. Your teacher will be able to
+tell you which pieces of the kit represent carbon, hydrogen, and oxygen. As you prepare the
+compounds, take a look at how many bonds carbon, hydrogen, and oxygen each make. Carbon
+dioxide, glucose, oxygen, and water are not gold, but why do you think they are golden to some
+organisms? You better get started. Some organism might need these compounds pretty soon!
+How is the
+Organic or
+Type of Bond
+Compound
+Structural Formula
+compound used in Inorganic? Justify (polar, non-polar
+the human body?
+your answer.
+or ionic)?
+Explain.
+Carbon Dioxide
+CO
+Glucose
+CHO
+Oxygen
+O
+Water
+HO
+Please answer the following questions on water:
+Why is water polar?
+Why is water so important to living things?
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools.
+Fill in the chart:
+Macromolecule
+Structure
+Building
+blocks
+Function within the
+cell
+Examples of
+Carbohydrate
+A) monosaccharide
+B) disaccharide
+C) polysaccharide
+Lipid
+Protein
+Nucleic Acids
+Identify the reactants and products in the following chemical reactions:
+ CH + O Æ CO + H
+ CO + H Æ. CH + O
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName
+ DatePeriod 
+Making the Connection-Lactose Intolerance
+What is lactose?
+Explain why you would classify lactose as a carbohydrate?
+Recall that this is a group of organic molecules that is classified by its number of rings. How many
+rings does a molecule of lactose have? Based on the number of rings, what is its appropriate
+chemical name?
+Which foods do you believe contain lactose? Explain.
+How is lactose broken down?
+If you are or know someone that is lactose intolerant, describe what causes you or the person to be
+affected by this disorder.
+What are the symptoms of lactose intolerance?
+Whom does lactose intolerance mainly affect?
+Explain why you believe these specific groups of people are mainly affected by this disorder.
+Justify your answer.
+What do you think can be done to manage lactose intolerance? Explain.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsThis page intentionally left blank.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName
+ DatePeriod 
+Making the Connection-Macromolecules and Nutrition
+Now that you are an expert on Carbohydrates, Lipids, Proteins, and Nucleic Acids, create a brochure using
+one of the major macromolecules that discusses some of the problems that can be caused by these
+macromolecules. Your brochure should look very similar to one that you would find in a doctor’s office.
+Being the expert that you are, provide detailed information so that readers will be well informed of:
+The macromolecules and their building blocks
+Foods in which they can be found
+Causes, symptoms, possible treatments of the problems associated with the macromolecule
+The human body system the problem mainly affects
+Multicultural Connection #
+ Based on the Africa: Challenges in the st Century video, explain how the African government plays a
+role in famine. Using your newly learned knowledge, how are the African citizens affected by lack of
+nutrition? What disorders may develop? What can be done to rectify famine in this area of the world?
+Justify your answer.
+ On a separate sheet of paper, write or type a letter to the United Nations or the newly elected president
+expressing your concern for the people of Africa. Explain the biological consequences of the lack of
+nutrition (i.e. lack of carbohydrates, proteins, lipids and  vitamins/minerals). Share your recommendations
+and any changes you think will make a difference in their lives.
+ Bring in an envelope and stamp to mail your letter to the United Nations or the President of the United
+States.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsMulticultural Connection #
+Let’s take a trip. Get in your seats and buckle up and prepare for takeoff. Are you tired? We just spent 
+hours on a plane to Japan. We are here to enjoy the food and the culture. It’s a little chilly, so put on your
+jacket. It’s fall. Look at the koyo (red leaves). Are you excited? Great! Let’s get ready for Bunka-no hi
+(Culture Day).
+Research the culture of Japan (i.e. food, holidays, family structure), the weather, and seasons to write a
+one page paper. Give details of the Japanese culture. Describe how it is different from your culture.
+Explain the significance of the Cherry Blossom Festival in Washington, DC. In addition, research how tree
+leaves lose their color and gain koyo. Go ahead, get started and enjoy your journey!
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName
+ DatePeriod 
+Cells and Cell Chemistry
+Compare a bacterial cell and a human body cell. Include in your response:
+ How they are similar and different in structure
+ How they are classified ()
+Complete the following:
+Organelle
+Function
+Where found (animal, plant,
+and/or, prokaryote)
+Plasma membrane
+Ribosome
+Vacuole
+Cell wall
+Centriole
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsChloroplast
+Cytoplasm
+Endoplasmic reticulum
+Golgi Apparatus
+Lysosome
+Microfilament/microtubule
+Mitochondria
+Nucleolus
+Nucleus
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. The cell theory states:Fill in the following Venn diagram with what you know about prokaryotes and eukaryotes.
+Prokaryotes
+Eukaryotes
+Why is the cell membrane selectively permeable?
+Discuss the conditions needed to cause water to diffuse into a cell.
+Discuss the conditions necessary to cause water to diffuse out of a cell.
+Describe what would happen to a red blood cell in each of the following situations:
+ It is placed in a solution with a high concentration of salt.
+ It is placed in distilled water without any solution.
+What are some methods organisms have developed for removing excess water?
+What is homeostasis? How is osmosis related to homeostasis?
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. Osmosis is the movement of  from  concentration to
+ concentration.
+Diffusion is the movement of  from  concentration to
+ concentration.
+When a cell is placed in a hypertonic solution, it will  becauseActive transport uses , passive transport uses no , and facilitated
+diffusion is a form of  transport.
+ Æ Tissues Æ  ÆOrgan Systems
+Fill in the blanks with the following terms:
+ameoboid
+ciliate
+flagella
+movement
+skeletal
+The movement of organisms is dependent upon the relationship between its muscle and its
+system. The muscles are required to pull the bones in order for movement to occur.
+Protozoa are classified according to their method of locomotion, or . One type of
+movement is through the twirling or lashing of the , which are long, hair-like structures
+on the surface of a cell. Another type of movement is , which is a creeping caused by
+pseudopods. The third type of movement is , which is the synchronized beating of
+short hair-like projections.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName  DatePeriod 
+Photosynthesis and Respiration
+Write the photosynthesis equation below:
+Write the cellular respiration equation below:
+What organelle carries out photosynthesis? 
+What organelle carries out cellular respiration? 
+Fill in the chart below
+Type of
+Respiration
+What cells it
+occurs within
+Conditions in which it
+occurs
+Most energy is produced
+Aerobic respiration
+Anaerobic respiration
+The CO originates in the 
+ it is placed in the atmosphere by 
+ the process that produces CO is called 
+The CO is used by 
+ they take CO + sunlight and produce + in their
+  (organelle)
+ this process is called: 
+The cycle in the process of photosynthesis.
+The cycle is in the process of respiration.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsThis page intentionally left blank.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName
+ DatePeriod 
+Enzymes
+What is an enzyme? 
+What group of macromolecules are enzymes in? 
+What is the job of an enzyme? 
+List  ways to increase an enzymes activity.
+What are enzymes? What is their role in a cell?
+An acid is a substance with a pH of , a base is a substance with a pH of
+, and a neutral solution has a pH of .
+One example of an acid is , a base is , and a neutral solution isWhat two things can cause enzymes to malfunction?  andIn the space provided, draw a graph that represents the effect of enzymes on a reaction that occurs in the
+body. Identify the reactants, products, and activation energy.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsThis page intentionally left blank.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName
+ DatePeriod 
+Cell Division and Genetics
+The DNA must replicate before mitosis in order to The DNA shuffles and is cut in half during . This is important
+because .
+The cell will complete mitosis when making .
+The cell will complete meiosis when making .
+List four differences between mitosis and meiosis?Summarize how sexual reproduction, which includes meiosis and fertilization, affects genetic variation
+within an offspring.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. Draw a picture of each phase of mitosis for a cell with four chromosomes in the next page. The following
+parts need to be labeled where appropriate: centrioles, chromosomes, spindles, nuclear envelope,
+cytoplasm, cell membrane, and centromere.
+Mitosis phases
+Phase
+What happens in the phase
+Interphase
+Prophase
+Metaphase
+Anaphase
+Telophase
+Draw and label the phases of meiosis on the next page.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsMITOSIS
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools
+MEIOSIS. What are the three components of a nucleotide?
+Draw a picture` of the structure of DNA that (at least) includes the terms: base,  sugar, phosphate,
+nucleotide, and helix.
+Describe DNA fingerprinting using the following terms: electrophoresis, agarose gel, DNA bands,
+banding pattern, lane, and DNA fragment.
+What do the bands in the gel pattern represent? What causes some bands to move further than other?
+Fill in the following chart as you compare/contrast RNA/ DNA.
+Characteristic
+DNA
+RNA
+Sugar present
+Number of
+strands
+Location
+Job
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsMutations
+Mutations and crossovers create different genes and gene sequences. Fill in the chart below about
+mutations.
+Type of Mutation
+Definition
+Example
+Deletion
+Point
+Insertion
+Protein Synthesis Definitions:
+Word
+Definition
+Codon
+Nucleotide
+Replication
+Anti-codon
+Clone
+mRNA
+tRNA
+What is transcription? 
+What is translation? 
+What is a chain of amino acids called? 
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsThis page intentionally left blank.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName
+ DatePeriod 
+Meiosis Model
+Introduction:
+Sexual reproduction requires two parents and involves two processes: meiosis and fertilization.
+Meiosis is the process that produces gametes, or sex cells. The gametes produced are haploid, which
+means the cells have one copy of each kind of chromosome. For example, if the organism’s chromosome
+number is eight, all of the body cells will contain  chromosomes; however its sex cells will contain 
+chromosomes. Through fertilization, a diploid cell called a zygote is produced from the union of a haploid
+sperm cell (male gamete) and a haploid egg cell (female gamete). Both meiosis and fertilization are
+important contributors to genetic variation within an offspring.
+Meiosis involves two divisions. The first division, Meiosis I, involves pairing the homologous
+chromosomes and then separating the homologues into separate cells (which reduces the chromosome
+number by half). Because any cell division is preceded by DNA replication, the second division of meiosis
+(Meiosis II) involves the separation of the individual duplicated chromosomes (sister chromatids).
+Procedure:
+Copy the diagram below onto your poster paper. Each circle represents a cell.
+Cell 
+Cell 
+Cell 
+Cell 
+Cell 
+Cell 
+Cell 
+Cell 
+This organism’s chromosome number is  (n = ). This means each body cell contains two different
+homologous pairs. All of the genetic information is found on a total of two chromosomes (chromosome 
+and chromosome ). However, each body cell contains two copies of each chromosome, one copy from
+mom and the other copy from dad. Choose two similar colors of pipe cleaners for chromosome  (for
+example mom chromosome  = pink and dad chromosome  = red). Choose two similar colors of pipe
+cleaners for chromosome  (for example mom chromosome  = lavender and dad chromosome  =
+purple).
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. Cell  is the diploid body cell before meiosis begins. Glue the correct number and types of pipe
+cleaners into Cell  to show the two pairs of homologous chromosomes.
+Before meiosis I begins, the chromosomes replicate. Obtain more pipe cleaners to represent DNA
+replication. Glue the correct number and types of pipe cleaners into Cell  to show the replicated
+chromosomes. This cell represents the cell during prophase I. The two homologous chromosomes should
+line up next to each other to form a tetrad. Crossing-over may occur at this point in the cell cycle.
+Illustrate at least one crossing-over event in Cell . Be sure to account for the “new” chromosomes
+produced as the result of crossing-over throughout the rest of your model.
+Cells  are the two cells produced at the end of meiosis I. Use pipe cleaners to show the correct
+number and types of chromosomes present in each cell.
+Cells  are the gametes produced after meiosis II. Unlike meiosis I, there is no replication of
+chromosomes before the cell divides. There are many different combinations of chromosomes that could
+occur during telophase II of meiosis II. Use your pipe cleaners to show how the chromosomes in Cells 
+are assorted into Cells .
+Analyze and Conclude:
+Draw and color the homologous pair for chromosome  and chromosome .
+MOM
+DAD
+CHROMOSOME 
+CHROMOSOME 
+State whether the chromosome number in each cell is diploid, haploid, or other.
+Cell:  Cell : 
+Cells :  Cells : 
+How many cell divisions occur during meiosis? 
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. Draw and color a crossing-over event in your tetrad and the resulting chromosome.
+CROSSING –OVER IN TETRAD
+CHROMOSOMES PRODUCED
+Explain how crossing-over increases genetic variation. How do the four gametes produced differ from each other? What are the differences between meiosis I and meiosis II? Are the arrangement of chromosomes in each gamete you produced the only possible combinations?
+Why or why not? Below is a diagram of an angiosperm. Shade in the location of meiosis that produces male gametes
+blue and female gametes red.
+Figure  . http://www.amnh.org/learn/biodiversitycounts/identhelp/PartsPlants/partsofflower.htm
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. Compare and contrast mitosis and meiosis by completing the table below.
+Mitosis
+Meiosis
+Function of Cells Produced
+Number of Cell Divisions
+Exchange of Genetic Material
+Between Homologous
+Chromosomes
+Number of Cells Produced
+Genetic Make-Up of Cells
+Produced
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName Date Pd.
+Should This Fish Be Called “Goldy?”
+Imagine! A sperm cell, from a male fish, fuses with an egg cell, from a female fish. Each fish gamete
+carries  chromosomes. The zygote that results from the fusion of the gametes contains  chromosomes from
+each parent. One pair of the zygote’s chromosomes are shown below.
+Chromosome from the Female Fish
+G
+s
+L
+C
+Chromosome from the Male Fish
+g
+S
+L
+c
+Each chromosome of the homologous pair contains alleles for the same traits. But one chromosome may have a
+dominant allele and the other a recessive allele. Use the drawings and the table to answer the questions.
+Trait
+Dominant Gene
+Recessive Gene
+Dorsal Fin Texture
+Jagged (S)
+Smooth (s)
+Dorsal Fin Shape
+Concave (C)
+Convex (c)
+Scale Size
+Large (L)
+Small (l)
+Scale Color
+Gold (G)
+Gray (g)
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. Will their new fish have gold colored scales? Explain.Does the female fish have gold colored scales? Explain.Does the male fish have gold colored scales? Explain.What will be the texture of the baby fish dorsal fin? Explain.Will the texture of the baby fish dorsal fin resemble that of either of its parents? Explain.Will the baby fish have large or small scales? Does the male fish have large scales? Does the female fish have large scales?Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. a. Define the term homozygous.
+ For which traits is the baby fish homozygous?
+ Define the term heterozygous.
+ For which traits is the baby fish heterozygous?
+Explain why you cannot completely describe the baby fish’s parents even though you can accurately describe
+the baby fish.Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsThis page intentionally left blank.
+Biology High School Assessment Student Resource Book
+Prince George’s County Public SchoolsName
+ DatePeriod 
+Genetics Definitions
+Word
+Definition
+Allele
+Autosome
+Dominant
+Gene
+Genotype
+Heterozygous
+Homozygous
+Phenotype
+Recessive
+Sex-chromosome
+Complete the following Punnett squares. Give the genotype and phenotype of each.
+Monohybrid
+Cross Tt X TT
+Cross a heterozygous right handed person with a left handed person.
+Right is dominant over left.
+T= tall
+t= short
+Cross Tt X Tt
+Biology High School Assessment Student Resource Book
+Prince George’s County Public Schools. Sex-linked
+Cross a female who is a carrier for hemophilia ( XHX) with a hemophiliac male (XHY).
+Answer the following questions.
+In Pisum Sativum, a pea plant, the allele for purple flower (P) is dominant over the allele for white
+flowers (p). A cross between two purple-flowered plants resulted in both purple-flowered and whiteflowered offspring, as shown in the table below.
+RESULTS OF PEA PLANT CROSS
+Flower
+Number of
+Plants
+PurpleWhiteOn a piece of paper, do the following:Draw a Punnett Square that shows the cross between the two purple-flowered parent plants
+described above. When writing the allele pairings, underline all lowercase letters (p).Fill in the genotypes of the offspring on the Punnett Square.Make a key to indicate which genotype produces which flower color.

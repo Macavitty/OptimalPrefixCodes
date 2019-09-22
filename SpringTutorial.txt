@@ -1,0 +1,351 @@
+If you have been using the Spring Framework for some time, you will be aware that Spring has undergone two
+major revisions: Spring released in October , and Spring released in November .
+Java SE and Java EE Support
+The Spring Framework continues to be compatible with all versions of Java since (and including) Java
+ This means that Java , Java and Java are supported, although some advanced functionality
+of the Spring Framework will not be available to you if you are committed to using Java Spring .
+introduces dedicated support for Java , after Spring .'s in-depth support for Java throughout the
+framework.
+Furthermore, Spring remains compatible with JEE . and higher, while at the same time introducing
+dedicated support for Java EE . This means that Spring can be consistently used on application servers
+such as BEA WebLogic  . and , IBM WebSphere  . and , Oracle OCJ and
+, JBoss  . and as well as Tomcat  . and Jetty . and Resin 
+. and . and GlassFish V and V.
+NOTE: We generally recommend using the most recent version of each application server generation. In
+particular, make sure you are using BEA WebLogic . SP or higher and WebSphere / 
+or higher, respectively, when using those WebLogic and WebSphere generations with Spring 
+This chapter is a guide to the new and improved features of Spring . and It is intended to provide a
+high-level summary so that seasoned Spring architects and developers can become immediately familiar with
+the new Spring .x functionality. For more in-depth information on the features, please refer to the
+corresponding sections hyperlinked from within this chapter.
+ The Inversion of Control (IoC) container
+One of the areas that contains a considerable number of . and . improvements is Spring's IoC container.
+ New bean scopes
+Previous versions of Spring had IoC container level support for exactly two distinct bean scopes (singleton and
+prototype). Spring . improves on this by not only providing a number of additional scopes depending on the
+environment in which Spring is being deployed (for example, request and session scoped beans in a web
+environment), but also by providing integration points so that Spring users can create their own scopes.
+It should be noted that although the underlying (and internal) implementation for singleton- and
+prototype-scoped beans has been changed, this change is totally transparent to the end user no existing
+configuration needs to change, and no existing configuration will break.
+Both the new and the original scopes are detailed in the section entitled Section “Bean scopes”.
+Spring Framework () 
+ Easier XML configuration
+Spring XML configuration is now even easier, thanks to the advent of the new XML configuration syntax
+based on XML Schema. If you want to take advantage of the new tags that Spring provides (and the Spring
+team certainly suggest that you do because they make configuration less verbose and easier to read), then do
+read the section entitled Appendix A, XML Schema-based configuration.
+On a related note, there is a new, updated DTD for Spring . that you may wish to reference if you cannot take
+advantage of the XML Schema-based configuration. The DOCTYPE declaration is included below for your
+convenience, but the interested reader should definitely read the 'spring-beans-dtd' DTD included in
+the 'dist/resources' directory of the Spring . distribution.
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN .//EN"
+"http://www.springframework.org/dtd/spring-beans-dtd">
+ Extensible XML authoring
+Not only is XML configuration easier to write, it is now also extensible.
+What 'extensible' means in this context is that you, as an application developer, or (more likely) as a third party
+framework or product vendor, can write custom tags that other developers can then plug into their own Spring
+configuration files. This allows you to have your own domain specific language (the term is used loosely here)
+of sorts be reflected in the specific configuration of your own components.
+Implementing custom Spring tags may not be of interest to every single application developer or enterprise
+architect using Spring in their own projects. We expect third-party vendors to be highly interested in
+developing custom configuration tags for use in Spring configuration files.
+The extensible configuration mechanism is documented in Appendix B, Extensible XML authoring.
+ Annotation-driven configuration
+Spring . introduced support for various annotations for configuration purposes, such as @Transactional,
+@Required and @PersistenceContext /@PersistenceUnit.
+Spring . introduces support for a complete set of configuration annotations: @Autowired in combination with
+support for the JSR- annotations @Resource, @PostConstruct and @PreDestroy .
+Annotation-driven bean configuration is discussed in Section “Annotation-based configuration”. Check
+out annotation support for Spring MVC as well: Section , “Annotation-based controllers”
+ Autodetecting components in the classpath
+Spring . introduces support component scanning: autodetecting annotated components in the classpath.
+Typically, such component classes will be annotated with stereotypes such as @Component, @Repository,
+@Service, @Controller. Depending on the application context configuration, such component classes will be
+autodetected and turned into Spring bean definitions, not requiring explicit configuration for each such bean.
+Annotation-driven bean configuration is discussed in Section , “@Component and further stereotype
+annotations”.
+What's new in Spring . and .?
+Spring Framework () 
+ Aspect Oriented Programming (AOP)
+Spring . has a much improved AOP offering. The Spring AOP framework itself is markedly easier to
+configure in XML, and significantly less verbose as a result; and Spring . integrates with the AspectJ
+pointcut language and @AspectJ aspect declaration style. The chapter entitled Chapter , Aspect Oriented
+Programming with Spring is dedicated to describing this new support.
+ Easier AOP XML configuration
+Spring . introduces new schema support for defining aspects backed by regular Java objects. This support
+takes advantage of the AspectJ pointcut language and offers fully typed advice (i.e. no more casting and
+Object[] argument manipulation). Details of this support can be found in the section entitled Section 
+“Schema-based AOP support”.
+ Support for @AspectJ aspects
+Spring . also supports aspects defined using the @AspectJ annotations. These aspects can be shared between
+AspectJ and Spring AOP, and require (honestly!) only some simple configuration. Said support for @AspectJ
+aspects is discussed in Section “@AspectJ support”.
+ Support for bean name pointcut element
+Spring . introduces support for the bean() pointcut element, matching specific named beans according to
+Spring-defined bean names. See Section , “Supported Pointcut Designators” for details.
+ Support for AspectJ load-time weaving
+Spring . introduces explicit support AspectJ load-time weaving, as alternative to the proxy-based AOP
+framework. The new context:load-time-weaver configuration element automatically activates AspectJ
+aspects as defined in AspectJ's META-INF/aop.xml descriptor, applying them to the current application context
+through registering a transformer with the underlying ClassLoader. Note that this only works in environments
+with class transformation support. Check out Section , “Load-time weaving with AspectJ in the Spring
+Framework” for the capabilities and limitations.
+ The Middle Tier
+ Easier configuration of declarative transactions in XML
+The way that transactions are configured in Spring . has been changed significantly. The previous x style
+of configuration continues to be valid (and supported), but the new style is markedly less verbose and is the
+recommended style. Spring . also ships with an AspectJ aspects library that you can use to make pretty much
+any object transactional - even objects not created by the Spring IoC container.
+Spring . supports convenient annotation-driven transaction management in combination with load-time
+weaving, through the use of context:load-time-weaver in combination with tx:annotation-driven
+mode="aspectj".
+The chapter entitled Chapter , Transaction management contains all of the details.
+What's new in Spring . and .?
+Spring Framework () 
+ Full WebSphere transaction management support
+Spring . explicitly supports IBM's WebSphere Application Server, in particular with respect to WebSphere's
+transaction manager. Transaction suspension is now fully supported through the use of WebSphere's new
+UOWManager API, which is available on WAS + and +.
+So if you run a Spring-based application on the WebSphere Application Server, we highly recommend to use
+Spring .'s WebSphereUowTransactionManager as your PlatformTransactionManager of choice. This is also
+IBM's official recommendation.
+For automatic detection of the underlying JTA-based transaction platform, consider the use of Spring .'s new
+tx:jta-transaction-manager configuration element. This will autodetect BEA WebLogic and IBM
+WebSphere, registering the appropriate PlatformTransactionManager.
+ JPA
+Spring . ships with a JPA abstraction layer that is similar in intent to Spring's JDBC abstraction layer in
+terms of scope and general usage patterns.
+If you are interested in using a JPA-implementation as the backbone of your persistence layer, the section
+entitled Section “JPA” is dedicated to detailing Spring's support and value-add in this area.
+Spring . upgrades its OpenJPA support to OpenJPA with support for advanced features such as
+savepoints.
+ Asynchronous JMS
+Prior to Spring Spring's JMS offering was limited to sending messages and the synchronous receiving of
+messages. This functionality (encapsulated in the JmsTemplate class) is great, but it doesn't address the
+requirement for the asynchronous receiving of messages.
+Spring . now ships with full support for the reception of messages in an asynchronous fashion, as detailed in
+the section entitled Section , “Asynchronous Reception - Message-Driven POJOs”.
+As of Spring the JCA style of setting up asynchronous message listeners is supported as well, through the
+GenericMessageEndpointManager facility. This is an alternative to the standard JMS listener facility, allowing
+closer integration with message brokers such as ActiveMQ and JORAM. See Section “Support for JCA
+Message Endpoints”.
+Spring . also introduces an XML namespace for simplifying JMS configuration, offering concise
+configuration of a large numbers of listeners. This namespace supports both the standard JMS listener facility
+as well as the JCA setup style, with minimal changes in the configuration. See Section “JMS Namespace
+Support”.
+ JDBC
+There are some small (but nevertheless notable) new classes in the Spring Framework's JDBC support library.
+The first, NamedParameterJdbcTemplate, provides support for programming JDBC statements using named
+parameters (as opposed to programming JDBC statements using only classic placeholder ('?') arguments.
+Another of the new classes, the SimpleJdbcTemplate, is aimed at making using the JdbcTemplate even easier
+to use when you are developing against Java + (Tiger).
+What's new in Spring . and .?
+Spring Framework () 
+Spring . significantly extends the functionality of SimpleJdbcTemplate and introduces SimpleJdbcCall and
+SimpleJdbcInsert operation objects.
+ The Web Tier
+The web tier support has been substantially improved and expanded in Spring with annotation-based
+controllers introduced in Spring 
+ Sensible defaulting in Spring MVC
+For a lot of projects, sticking to established conventions and having reasonable defaults is just what the projects
+need this theme of convention-over-configuration now has explicit support in Spring MVC. What this means
+is that if you establish a set of naming conventions for your Controllers and views, you can substantially cut
+down on the amount of XML configuration that is required to setup handler mappings, view resolvers,
+ModelAndView instances, etc. This is a great boon with regards to rapid prototyping, and can also lend a degree
+of (always good-to-have) consistency across a codebase.
+Spring MVC's convention-over-configuration support is detailed in the section entitled Section 
+“Convention over configuration”
+ Portlet framework
+Spring . ships with a Portlet framework that is conceptually similar to the Spring MVC framework. Detailed
+coverage of the Spring Portlet framework can be found in the section entitled Chapter , Portlet MVC
+Framework.
+ Annotation-based controllers
+Spring . introduces an annotation-based programming model for MVC controllers, using annotations such as
+@RequestMapping, @RequestParam, @ModelAttribute, etc. This annotation support is available for both Servlet
+MVC and Portlet MVC. Controllers implemented in this style do not have to extend specific base classes or
+implement specific interfaces. Furthermore, they do not usually have direct dependencies on Servlet or Portlet
+API's, although they can easily get access to Servlet or Portlet facilities if desired. For further details, see
+Section “Annotation-based controller configuration”.
+ A form tag library for Spring MVC
+A rich JSP tag library for Spring MVC was the JIRA issue that garnered the most votes from Spring users (by a
+wide margin).
+Spring . ships with a full featured JSP tag library that makes the job of authoring JSP pages much easier
+when using Spring MVC; the Spring team is confident it will satisfy all of those developers who voted for the
+issue on JIRA. The new tag library is itself covered in the section entitled Section , “Using Spring's form
+tag library”, and a quick reference to all of the new tags can be found in the appendix entitled Appendix E,
+spring-form.tld.
+ Tiles support
+Spring . ships support for Tiles , the next generation of the popular Tiles templating framework. This
+What's new in Spring . and .?
+Spring Framework () 
+supersedes Spring's former support for Tiles , as included in Struts .x. See Section “Tiles” for details.
+ JSF . support
+Spring . supports JSF providing a JSF . variant of Spring's DelegatingVariableResolver in the form
+of the new SpringBeanFacesELResolver.
+ JAX-WS support
+Spring . fully supports JAX-WS ./ as included in Java and Java EE . JAX-WS is the successor of
+JAX-RPC, allowing access to WSDL/SOAP-based web services as well as JAX-WS style exposure of web
+services.
+ Everything else
+This final section outlines all of the other new and improved Spring ./. features and functionality.
+ Dynamic language support
+Spring . introduced support for beans written in languages other than Java, with the currently supported
+dynamic languages being JRuby, Groovy and BeanShell. This dynamic language support is comprehensively
+detailed in the section entitled Chapter , Dynamic language support.
+Spring . refines the dynamic languages support with autowiring and support for the recently released JRuby
+
+ Enhanced testing support
+Spring . introduces the Spring TestContext Framework which provides annotation-driven unit and integration
+testing support that is agnostic of the actual testing framework in use. The same techniques and
+annotation-based configuration used in, for example, a JUnit . environment can also be applied to tests
+written with JUnit TestNG, etc.
+In addition to providing generic and extensible testing infrastructure, the Spring TestContext Framework
+provides out-of-the-box support for Spring-specific integration testing functionality such as context
+management and caching, dependency injection of test fixtures, and transactional test management with default
+rollback semantics.
+To discover how this new testing support can assist you with writing unit and integration tests, consult
+Section , “Spring TestContext Framework” of the revised testing chapter.
+ JMX support
+The Spring Framework . has support for Notifications; it is also possible to exercise declarative control
+over the registration behavior of MBeans with an MBeanServer.
+  Section “Notifications”
+  Section , “Controlling the registration behavior”
+What's new in Spring . and .?
+Spring Framework () 
+Furthermore, Spring . provides a context:mbean-export configuration element for convenient registration
+of annotated bean classes, detecting Spring's @ManagedResource annotation.
+ Deploying a Spring application context as JCA adapter
+Spring . supports the deployment of a Spring application context as JCA resource adapter, packaged as a
+JCA RAR file. This allows headless application modules to be deployed into JEE servers, getting access to all
+the server's infrastructure e.g. for executing scheduled tasks, listening for incoming messages, etc.
+ Task scheduling
+Spring . offers an abstraction around the scheduling of tasks. For the interested developer, the section entitled
+Section “The Spring TaskExecutor abstraction” contains all of the details.
+The TaskExecutor abstraction is used throughout the framework itself as well, e.g. for the asynchronous JMS
+support. In Spring it is also used in the JCA environment support.
+ Java (Tiger) support
+Find below pointers to documentation describing some of the new Java support in Spring . and 
+  Section “Annotation-based configuration”
+  Section , “@Required”
+  Section , “Using @Transactional”
+  Section , “SimpleJdbcTemplate”
+  Section “JPA”
+  Section “@AspectJ support”
+  Section , “Using AspectJ to dependency inject domain objects with Spring”
+ Migrating to Spring .
+This final section details issues that may arise during any migration from Spring ./. to Spring 
+Upgrading to Spring . from a Spring x application should simply be a matter of dropping the Spring .
+jar into the appropriate location in your application's directory structure. We highly recommend upgrading to
+Spring . from any Spring . application that runs on JDK or higher, in particular when running on Java
+ or higher, leveraging the significant configuration conveniences and performance improvements that Spring
+. has to offer.
+Whether an upgrade from Spring x will be as seamless depends on how much of the Spring APIs you are
+using in your code. Spring . removed pretty much all of the classes and methods previously marked as
+deprecated in the Spring x codebase, so if you have been using such classes and methods, you will of course
+have to use alternative classes and methods (some of which are summarized below).
+With regards to configuration, Spring x style XML configuration is %, satisfaction-guaranteed
+What's new in Spring . and .?
+Spring Framework () 
+compatible with the Spring . library. Of course if you are still using the Spring x DTD, then you won't be
+able to take advantage of some of the new Spring . functionality (such as scopes and easier AOP and
+transaction configuration), but nothing will blow up.
+The suggested migration strategy is to drop in the Spring . jar(s) to benefit from the improved code present in
+the release (bug fixes, optimizations, etc.). You can then, on an incremental basis, choose to start using the new
+Spring . features and configuration. For example, you could choose to start configuring just your aspects in
+the new Spring style; it is perfectly valid to have % of your configuration using the old-school Spring x
+configuration (which references the x DTD), and have the other % using the new Spring configuration
+(which references the ./. DTD or XSD). Bear in mind that you are not forced to upgrade your XML
+configuration should you choose to drop in the Spring . libraries.
+ Changes
+For a comprehensive list of changes, consult the 'changelog.txt' file that is located in the top level directory
+of the Spring Framework distribution.
+. Supported JDK versions
+As of Spring support for JDK . has been removed, following Sun's official deprecation of JDK . in late
+. If you haven't done so already, upgrade to JDK or higher.
+If you need to stick with an application server that only supports JDK such as WebSphere . or we
+recommend using the Spring Framework version / which still supports JDK 
+. Jar packaging in Spring .
+As of Spring Spring Web MVC is no longer part of the 'spring.jar' file. Spring MVC can be found in
+'spring-webmvc.jar' and 'spring-webmvc-portlet.jar' in the lib/modules directory of the distribution.
+Furthermore, the Struts .x support has been factored out into 'spring-webmvc-struts.jar'.
+Note: The commonly used Spring's DispatcherServlet is part of Spring's Web MVC framework. As a
+consequence, you need to add 'spring-webmvc.jar' (or 'spring-webmvc-portlet/struts.jar') to a
+'spring.jar' scenario, even if you are just using DispatcherServlet for remoting purposes (e.g. exporting
+Hessian or HTTP invoker services).
+Spring .'s 'spring-jmx.jar' and 'spring-remoting.jar' have been merged into Spring .'s
+'spring-context.jar' (for the JMX and non-HTTP remoting support) and partly into 'spring-web.jar' (for
+the HTTP remoting support).
+Spring .'s 'spring-support.jar' has been renamed to 'spring-context-support.jar', expressing the
+actual support relationship more closely. 'spring-portlet.jar' has been renamed to
+'spring-webmvc-portlet.jar', since it is technically a submodule of Spring's Web MVC framework.
+Analogously, 'spring-struts.jar' has been renamed to 'spring-webmvc-struts.jar'.
+Spring .'s 'spring-jdo.jar', 'spring-jpa.jar', 'spring-hibernate.jar', 'spring-toplink.jar' and
+'spring-ibatis.jar' have been combined into Spring .'s coarse-granular 'spring-orm.jar'.
+Spring .'s 'spring-test.jar' supersedes the previous 'spring-mock.jar', indicating the stronger focus on
+the test context framework. Note that 'spring-test.jar' contains everything 'spring-mock.jar' contained
+in previous Spring versions; hence it can be used as a straightforward replacement for unit and integration
+testing purposes.
+What's new in Spring . and .?
+Spring Framework () 
+Spring .'s 'spring-tx.jar' supersedes the previous 'spring-dao.jar' and 'spring-jca.jar' files,
+indicating the stronger focus on the transaction framework.
+Spring . ships its framework jars as OSGi-compliant bundles out of the box. This facilitates use of Spring in
+OSGi environments, not requiring custom packaging anymore.
+. XML configuration
+Spring . ships with XSDs that describe Spring's XML metadata format in a much richer fashion than the
+DTD that shipped with previous versions. The old DTD is still fully supported, but if possible you are
+encouraged to reference the XSD files at the top of your bean definition files.
+One thing that has changed in a (somewhat) breaking fashion is the way that bean scopes are defined. If you are
+using the Spring . DTD you can continue to use the 'singleton' attribute. You can however choose to
+reference the new Spring . DTD which does not permit the use of the 'singleton' attribute, but rather uses
+the 'scope' attribute to define the bean lifecycle scope.
+. Deprecated classes and methods
+A number of classes and methods that previously were marked as @deprecated have been removed from the
+Spring . codebase. The Spring team decided that the . release marked a fresh start of sorts, and that any
+deprecated 'cruft' was better excised now instead of continuing to haunt the codebase for the foreseeable future.
+As mentioned previously, for a comprehensive list of changes, consult the 'changelog.txt' file that is located
+in the top level directory of the Spring Framework distribution.
+The following classes/interfaces have been removed as of Spring .:
+  ResultReader : Use the RowMapper interface instead.
+  BeanFactoryBootstrap : Consider using a BeanFactoryLocator or a custom bootstrap class instead.
+. Apache OJB
+As of Spring support for Apache OJB was totally removed from the main Spring source tree. The Apache
+OJB integration library is still available, but can be found in its new home in the Spring Modules project.
+. iBATIS
+Please note that support for iBATIS SQL Maps . has been removed. If you haven't done so already, upgrade
+to iBATIS SQL Maps 
+. Hibernate
+As of Spring support for Hibernate . and Hibernate . has been removed. If you haven't done so
+already, upgrade to Hibernate . or higher.
+If you need to stick with Hibernate . or . for the time being, we recommend to keep using the Spring
+Framework version / which still supports those versions of Hibernate.
+. JDO
+As of Spring support for JDO . has been removed. If you haven't done so already, upgrade to JDO . or
+What's new in Spring . and .?
+Spring Framework () 
+higher.
+If you need to stick with JDO . for the time being, we recommend to keep using the Spring Framework
+version / which still supports that version of JDO.
+. UrlFilenameViewController
+Since Spring the view name that is determined by the UrlFilenameViewController now takes into account
+the nested path of the request. This is a breaking change from the original contract of the
+UrlFilenameViewController, and means that if you are upgrading from Spring .x to Spring .x and you are
+using this class you might have to change your Spring Web MVC configuration slightly. Refer to the class level
+Javadocs of the UrlFilenameViewController to see examples of the new contract for view name
+determination.
+ Updated sample applications
+A number of the sample applications have also been updated to showcase the new and improved features of
+Spring So do take the time to investigate them. The aforementioned sample applications can be found in
+the 'samples' directory of the full Spring distribution ('spring-with-dependencies.[zip|tar.gz]').
+Spring . features revised versions of the PetClinic and PetPortal sample applications, reengineered from the
+ground up for leveraging Spring .'s annotation configuration features. It also uses Java autoboxing,
+generics, varargs and the enhanced for loop. A Java or SDK is now required to build and run the sample.
+Check out PetClinic and PetPortal to get an impression of what Spring . has to offer!
+ Improved documentation
+The Spring reference documentation has also substantially been updated to reflect all of the above features new
+in Spring . and While every effort has been made to ensure that there are no errors in this documentation,
+some errors may nevertheless have crept in. If you do spot any typos or even more serious errors, and you can
+spare a few cycles during lunch, please do bring the error to the attention of the Spring team by raising an issue.
+Special thanks to Arthur Loder for his tireless proofreading of the Spring Framework reference documentation
+and JavaDocs.
