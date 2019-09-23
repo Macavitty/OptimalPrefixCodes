@@ -57,7 +57,7 @@ public class PairTextEntropy implements TextEntropy {
     private void findEntropy() {
         mapStringAttributes.values()
                 .forEach(stringAttribute -> {
-                    stringAttribute.setPossibility(((double) stringAttribute.getCount()) / (fileLength - 1));
+                    stringAttribute.setPossibility(((double) stringAttribute.getCount()) / getCountPairWithSecond(stringAttribute.getString().charAt(1)));
                     stringAttribute.setEntropy(-(stringAttribute.getPossibility() * log2(stringAttribute.getPossibility())));
                 });
         mapCharacterAttributes.values()
@@ -65,6 +65,14 @@ public class PairTextEntropy implements TextEntropy {
                     characterAttribute.setPossibility(((double) characterAttribute.getCount()) / fileLength);
                     characterAttribute.setEntropy(-(characterAttribute.getPossibility() * log2(characterAttribute.getPossibility())));
                 });
+    }
+
+    private double getCountPairWithSecond(char second) {
+        return mapStringAttributes.values().stream()
+                .filter(stringAttribute -> stringAttribute.getString().charAt(1) == second)
+                .mapToDouble(StringAttribute::getCount)
+                .sum();
+
     }
 
     @Override
