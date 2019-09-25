@@ -8,18 +8,18 @@ import static java.lang.Math.log;
 
 public class TextEntropyUtils {
 
-    public static void printFormattedTable(PrintStream printStream, List<StringAttribute> stringAttributes) {
+    public static void printFormattedTable(PrintStream printStream, List<SymbolAttribute> symbolAttributes) {
         final int[] columnWidth = {15, 12, 8};
         final String formatString = "%" + columnWidth[0] + "s%" + columnWidth[1] + ".4f%" + columnWidth[2] + ".4f\n";
         printStream.printf("%" + columnWidth[0] + "s%" + columnWidth[1] + "s%" + columnWidth[2] + "s\n", "Character", "Possibility", "Entropy");
-        stringAttributes.forEach(stringAttribute -> {
-            String outputString = stringAttribute.getString();
+        symbolAttributes.forEach(symbolAttribute -> {
+            String outputString = symbolAttribute.getString();
             outputString = outputString.replace(" ", "<space>");
             outputString = outputString.replace(TextEntropy.PUNCTUATION_CHARACTER, "<punct>");
             printStream.printf(formatString,
                     outputString,
-                    stringAttribute.getPossibility(),
-                    stringAttribute.getEntropy());
+                    symbolAttribute.getPossibility(),
+                    symbolAttribute.getEntropy());
         });
     }
 
