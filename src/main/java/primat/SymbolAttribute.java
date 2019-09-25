@@ -1,15 +1,17 @@
 package primat;
 
-public class StringAttribute {
+public class SymbolAttribute {
 
     private String string;
     private int count;
-    private double possibility;
-    private double entropy;
+    private double probability;
+    private String code = "";
+    private int idx;
 
-    public StringAttribute(String string, int count) {
+    public SymbolAttribute(String string, int count, int idx) {
         this.string = string;
         this.count = count;
+        this.idx = idx;
     }
 
     public String getString() {
@@ -28,20 +30,35 @@ public class StringAttribute {
         this.count = count;
     }
 
-    public double getPossibility() {
-        return possibility;
+    public double getProbability() {
+        return probability;
     }
 
-    public void setPossibility(double possibility) {
-        this.possibility = possibility;
+    public void setProbability(double probability) {
+        this.probability = probability;
     }
 
-    public double getEntropy() {
-        return entropy;
+    public String getCode() {
+        return code;
     }
 
-    public void setEntropy(double entropy) {
-        this.entropy = entropy;
+    public void setCode(String code) {
+        this.code = code;
     }
 
+    public boolean addDigitToCode(String digit) {
+        if (digit.equals("0") || digit.equals("1")){
+            this.code = code + digit;
+            return true;
+        }
+        return false;
+    }
+
+    public int getIdx() {
+        return idx;
+    }
+
+    public void setIdx(int idx) {
+        this.idx = idx;
+    }
 }
