@@ -71,22 +71,22 @@ public class ShannonFanoCode implements OptimalPrefixCode {
 
         int middle = left;
         int localLeft = left - 1;
-        while (middle < right ){
-            double firstGroupSum, secondGroupSum;
-            if (middle == localLeft){
-                firstGroupSum = prefixSums[middle];
-            }
-            else firstGroupSum =  prefixSums[middle] - (localLeft < 0 ? 0 : prefixSums[localLeft]);
-            secondGroupSum = prefixSums[right] - prefixSums[middle];
-            if (firstGroupSum < secondGroupSum) {
-                return;
-            }
-            middle++;
-        }
-
-//        while (middle < right && (middle == localLeft ? prefixSums[middle] : prefixSums[middle] - (localLeft < 0 ? 0 : prefixSums[localLeft])) < prefixSums[right] - prefixSums[middle]) {
+//        while (middle < right ){
+//            double firstGroupSum, secondGroupSum;
+//            if (middle == localLeft){
+//                firstGroupSum = prefixSums[middle];
+//            }
+//            else firstGroupSum =  prefixSums[middle] - (localLeft < 0 ? 0 : prefixSums[localLeft]);
+//            secondGroupSum = prefixSums[right] - prefixSums[middle];
+//            if (firstGroupSum < secondGroupSum) {
+//                return;
+//            }
 //            middle++;
 //        }
+
+        while (middle < right && (middle == localLeft ? prefixSums[middle] : prefixSums[middle] - (localLeft < 0 ? 0 : prefixSums[localLeft])) < prefixSums[right] - prefixSums[middle]) {
+            middle++;
+        }
 
         for (int i = left; i <= middle; i++) {
             findSymbolAttributeByIdx(i).addDigitToCode("0");
